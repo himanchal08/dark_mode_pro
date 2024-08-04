@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transition: all ease 0.5s;
+}
+.toggle_btn {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.toggle_label {
+  height: 50px;
+  width: 110px;
+  background-color: black;
+  border-radius: 50px;
+  transition: all ease 0.5s;
+  border-style: none;
+}
+#checkbox {
+    visibility: hidden;
+}
+.toggle_ball {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+ transition: all ease 0.5s;
+  transform: scale(0.8);
+  border-style: none;
+}
+#checkbox:checked + .toggle_label .toggle_ball {
+    transform: translateX(60px) scale(0.8);
+  background-color: black;
+}
+
+body.dark_mode{
+background-color: black;
+}
+body.light_mode{
+background-color: white;
+}
+.toggle_ball.dark_mode{
+    background-color: black;
+    }
+.toggle_ball.light_mode{
+    background-color: white;
+    }
+.toggle_label.dark_mode{
+        background-color: black;
+        }
+.toggle_label.light_mode{
+        background-color: white;
+        }
