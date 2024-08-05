@@ -11,22 +11,25 @@ body {
   justify-content: center;
   background-color: white;
   transition: all ease 0.5s;
+  overflow: hidden;
 }
 .toggle_btn {
   height: 50px;
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 .toggle_label {
   height: 50px;
   width: 110px;
   background-color: black;
   border-radius: 50px;
+  z-index: 2;
   transition: all ease 0.5s;
   border-style: none;
 }
 #checkbox {
-    visibility: hidden;
+  visibility: hidden;
 }
 .toggle_ball {
   height: 50px;
@@ -34,40 +37,59 @@ body {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
- transition: all ease 0.5s;
+  transition: all ease 0.5s;
   transform: scale(0.8);
   border-style: none;
+  z-index: 2;
 }
-.sun{
+
+.sun {
   height: 50px;
   width: 50px;
   background-color: yellow;
   border-radius: 50%;
   display: inline-block;
- transition: all ease 0.5s;
+  transition: all ease 0.5s;
   transform: scale(0.8);
   border-style: none;
+  z-index: 2;
 }
 #checkbox:checked + .toggle_label .toggle_ball {
-    transform: translateX(60px) scale(0.8);
+  transform: translateX(60px) scale(0.8);
   background-color: black;
 }
 
-body.dark_mode{
-background-color: black;
+body.dark_mode {
+  background-color: black;
 }
-body.light_mode{
-background-color: white;
+body.light_mode {
+  background-color: white;
 }
-.toggle_ball.dark_mode{
-    background-color: black;
-    }
-.toggle_ball.light_mode{
-    background-color: white;
-    }
-.toggle_label.dark_mode{
-        background-color: black;
-        }
-.toggle_label.light_mode{
-        background-color: white;
-        }
+.toggle_ball.dark_mode {
+  background-color: black;
+}
+.toggle_ball.light_mode {
+  background-color: white;
+}
+.toggle_label.dark_mode {
+  background-color: black;
+}
+.toggle_label.light_mode {
+  background-color: white;
+}
+.dark-mode {
+  position: relative;
+  transform: scale(0);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: yellow;
+  transition: 2s ease-in-out;
+  display: flex;
+  z-index: 1;
+}
+.dark-mode.active {
+  transform: scale(20);
+  transition: 2s ease-in-out;
+}
+
