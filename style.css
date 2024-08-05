@@ -38,6 +38,16 @@ body {
   transform: scale(0.8);
   border-style: none;
 }
+.sun{
+  height: 50px;
+  width: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+ transition: all ease 0.5s;
+  transform: scale(0.8);
+  border-style: none;
+}
 #checkbox:checked + .toggle_label .toggle_ball {
     transform: translateX(60px) scale(0.8);
   background-color: black;
