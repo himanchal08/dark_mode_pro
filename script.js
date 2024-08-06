@@ -1,14 +1,21 @@
 const btn = document.querySelector("#checkbox");
-const back = document.querySelector("body");
-const ball = document.querySelector(".toggle_ball");
-const label = document.querySelector(".toggle_label");
+const darkMode = document.querySelector(".dark-mode");
 const save = localStorage.getItem("theme");
-const darkMode = document.querySelector(".dark-mode")
 
+if (save === "dark") {
+  btn.checked = true;
+  darkMode.classList.add("active");
+} else {
+  btn.checked = false;
+  darkMode.classList.remove("active");
+}
 
-
-btn.addEventListener("click", () => {
-    darkMode.classList.toggle('active');
-    
-
+btn.addEventListener("change", () => {
+  if (btn.checked) {
+    darkMode.classList.add("active");
+    localStorage.setItem("theme", "dark");
+  } else {
+    darkMode.classList.remove("active");
+    localStorage.setItem("theme", "light");
+  }
 });

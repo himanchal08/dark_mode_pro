@@ -4,19 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Toggle-Button</title>
   </head>
   <body>
-    <div class="dark-mode"></div>
-    <div class="toggle_btn">
+    <div class="tggle_btn">
+      <div class="dark-mode"></div>
       <input type="checkbox" id="checkbox" />
       <label for="checkbox" class="toggle_label">
       <span class="toggle_ball">
-        <div class="sun"></div>
+        <div class="extra"><i class="ri-contrast-2-fill" id="moon"></i>
+          <i class="ri-sun-line" id="sun"></i>
+        </div>
       </span>
     </label>
-    </div>
+  </div>
+
+  <div class="cnavas">
     
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
