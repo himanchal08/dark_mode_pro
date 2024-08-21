@@ -1,5 +1,7 @@
 const btn = document.querySelector("#checkbox");
 const darkMode = document.querySelector(".dark-mode");
+const search = document.querySelector(".bar");
+const enter = document.querySelector("#coco");
 const save = localStorage.getItem("theme");
 
 if (save === "dark") {
@@ -87,3 +89,16 @@ function resize() {
     Anim(fireFly);
   }
 }
+
+search.addEventListener("keypress",(e) =>{
+  if (e.key==="Enter") {
+    let url= 'https://www.google.com/search?q='+search.value;
+    window.open(url,'_self');
+  }
+  else{
+    enter.addEventListener("click",() =>{
+        let url= 'https://www.google.com/search?q='+search.value;
+        window.open(url,'_self');
+  })
+  }
+})
