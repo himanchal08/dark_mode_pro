@@ -36,7 +36,7 @@ btn.addEventListener("change", () => {
   }
 });
 
-var total = 60,
+var total = 69,
   container = document.querySelector("body"),
   w = window.innerWidth,
   h = window.innerHeight,
@@ -90,15 +90,14 @@ function resize() {
   }
 }
 
-search.addEventListener("keypress",(e) =>{
-  if (e.key==="Enter") {
-    let url= 'https://www.google.com/search?q='+search.value;
-    window.open(url,'_self');
+search.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    let url = "https://www.google.com/search?q=" + search.value;
+    window.open(url, "_self");
+  } else {
+    enter.addEventListener("click", () => {
+      let url = "https://www.google.com/search?q=" + search.value;
+      window.open(url, "_self");
+    });
   }
-  else{
-    enter.addEventListener("click",() =>{
-        let url= 'https://www.google.com/search?q='+search.value;
-        window.open(url,'_self');
-  })
-  }
-})
+});
